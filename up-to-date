@@ -1,0 +1,11 @@
+repos=$(find $HOME -name "*.git" -type d)
+
+for repo in $repos
+do
+    cd $repo
+    cd ..
+    echo $PWD
+    echo "-------------------------------------------------------"
+    git status
+    echo
+done
